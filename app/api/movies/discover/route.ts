@@ -1,0 +1,38 @@
+import config from "@/lib/config";
+import { NextRequest, NextResponse } from "next/server";
+
+export async function GET(req: NextRequest) {
+  const searchParams = req.nextUrl.searchParams;
+  const genreString = searchParams.get('genres')
+  const url = `https://api.themoviedb.org/3/discover/movie?with_genres=${genreString}`;
+  console.log(url);
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.env.tmdb.tmdbAuthHeader!
+    }
+  };
+
+  try {
+
+    const res = await fetch(url, options);
+    if (!res.ok) {
+      return NextResponse.json(
+        { error: `API request failed with status ${res.status}` },
+        { status: res.status }
+      );
+    }
+
+    const data = await res.json();
+    return NextResponse.json(data);
+
+  } catch (error) {
+
+    console.error('Error fetching popular movies:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch popular movies' },
+      { status: 500 }
+    );
+  }
+}
