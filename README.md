@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Lumina
 
-## Getting Started
+**Stream Movies & TV Shows Without Ads — Effortlessly.**
 
-First, run the development server:
+![Lumina Screenshot](./public/homepage.png) <!-- Replace with your actual screenshot -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Lumina** is a sleek, modern movie and TV show streaming platform built with **Next.js**. The goal is simple: provide users with a smooth, distraction-free viewing experience — no ads, no clutter, just content.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Features
 
-To learn more about Next.js, take a look at the following resources:
+- 🎬 Watch your favorite **movies** and **TV shows** instantly
+- 🚫 100% **ad-free** streaming experience
+- ⚡ Built with **Next.js** for blazing-fast performance
+- 📱 Fully **responsive design** — works on all devices
+- 🌙 Very Pretty UI
+- 🔍 Powerful search and filtering 
+- 🧠 Smart content suggestions 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧑‍💻 Tech Stack
 
-## Deploy on Vercel
+| Tech | Purpose |
+|------|---------|
+| [Next.js](https://nextjs.org/) | React Framework for SSR & routing |
+| [React](https://reactjs.org/) | UI Components |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS styling |
+| [Docker](https://www.docker.com/) | Delivery |
+| [GitHub Actions](https://github.com/features/actions) | CI/CD |
+| [AWS Lightsail](https://aws.amazon.com/lightsail/) | Hosting |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- --- -->
+<!---->
+<!-- ## 📸 Preview -->
+<!---->
+<!---->
+<!-- --- -->
+<!---->
+<!-- ## 📦 Getting Started -->
+<!---->
+<!-- ```bash -->
+<!-- # Clone the repo -->
+<!-- git clone https://github.com/roirepus/lumina.git -->
+<!-- cd lumina -->
+<!---->
+<!-- # Install dependencies -->
+<!-- npm install -->
+<!---->
+<!-- # Run development server -->
+<!-- npm run dev -->
