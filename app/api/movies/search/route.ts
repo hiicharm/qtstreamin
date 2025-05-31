@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.env.tmdb.tmdbAuthHeader!
+      Authorization: process.env.NEXT_PRIVATE_TMDB_AUTH_HEADER!
     }
   };
 

@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [new URL("https://image.tmdb.org/**")]
   },
+  assetPrefix: '/'
 };
 
 export default nextConfig;

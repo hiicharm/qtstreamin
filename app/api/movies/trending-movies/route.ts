@@ -1,4 +1,3 @@
-import config from "@/lib/config";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -7,7 +6,7 @@ export async function GET() {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.env.tmdb.tmdbAuthHeader!
+      Authorization: process.env.NEXT_PRIVATE_TMDB_AUTH_HEADER!
     }
   };
 

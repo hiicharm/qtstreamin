@@ -1,4 +1,3 @@
-import config from "./config";
 
 export interface MovieProps {
   id: number,
@@ -23,7 +22,7 @@ export async function getFeaturedMovie(): Promise<MovieProps> {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.env.tmdb.tmdbAuthHeader!
+      Authorization: process.env.NEXT_PRIVATE_TMDB_AUTH_HEADER!
     }
   };
   try {
@@ -47,7 +46,7 @@ export async function getTrendingMovies(): Promise<MovieProps[]> {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.env.tmdb.tmdbAuthHeader!
+      Authorization: process.env.NEXT_PRIVATE_TMDB_AUTH_HEADER!
     }
   };
   try {

@@ -1,4 +1,3 @@
-import config from "@/lib/config";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -8,7 +7,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.env.tmdb.tmdbAuthHeader!
+      Authorization: process.env.NEXT_PRIVATE_TMDB_AUTH_HEADER!
     }
   };
   try {
