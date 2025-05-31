@@ -54,11 +54,11 @@ export async function getTrendingMovies(): Promise<MovieProps[]> {
     const res = await fetch(url, options)
     const data = await res.json();
     if (!data.results || data.results.length === 0) {
-      return {} as Promise<MovieProps[]>;
+      return [];
     }
-    return data.results as Promise<MovieProps[]>;
+    return data.results;
   } catch (error) {
     console.error("Failed to fetch featured movie details:", error);
-    return {} as Promise<MovieProps[]>;
+    return [];
   }
 }

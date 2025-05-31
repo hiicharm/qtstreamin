@@ -18,7 +18,7 @@ export default async function Home() {
           seeAllLink="/movies"
         >
           {
-            trendingMovies.map((movie) => {
+            trendingMovies?.map((movie) => {
               return (
                 <div key={movie.id} className="min-w-[150px] sm:min-w-[180px] flex-shrink-0" >
                   <MovieCard movie={movie} />
