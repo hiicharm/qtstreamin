@@ -46,4 +46,3 @@ jobs:
               --env-file .env \
               --name lumina \
               roirepus/lumina:latest
-              rm  .env
