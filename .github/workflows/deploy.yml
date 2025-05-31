@@ -38,10 +38,12 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            echo "NEXT_PRIVATE_TMDB_AUTH_HEADER=${{ secrets.NEXT_PRIVATE_TMDB_AUTH_HEADER }}" > .env
             sudo docker pull roirepus/lumina:latest
             sudo docker stop lumina || true
             sudo docker rm lumina || true
             sudo docker run -d -p 3005:3000 \
-              -e "NEXT_PRIVATE_TMDB_AUTH_HEADER=${{ secrets.NEXT_PRIVATE_TMDB_AUTH_HEADER }}" \
+              --env-file .env \
               --name lumina \
               roirepus/lumina:latest
+              rm  .env
