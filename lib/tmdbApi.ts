@@ -30,7 +30,6 @@ export async function getTrendingMovies(): Promise<MovieProps[]> {
 
     const res = await fetch(url, {
       ...options,
-      cache: "no-store"
     })
     const data = await res.json();
     if (!data.results || data.results.length === 0) {
