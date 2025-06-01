@@ -23,11 +23,14 @@ export async function getFeaturedMovie(): Promise<MovieProps> {
     headers: {
       accept: 'application/json',
       Authorization: process.env.NEXT_PRIVATE_TMDB_AUTH_HEADER!
-    }
+    },
   };
   try {
 
-    const res = await fetch(url, options)
+    const res = await fetch(url, {
+      ...options,
+      cache: "no-store"
+    })
     const data = await res.json();
     if (!data.results || data.results.length === 0) {
       return {} as Promise<MovieProps>;
@@ -51,7 +54,10 @@ export async function getTrendingMovies(): Promise<MovieProps[]> {
   };
   try {
 
-    const res = await fetch(url, options)
+    const res = await fetch(url, {
+      ...options,
+      cache: "no-store"
+    })
     const data = await res.json();
     if (!data.results || data.results.length === 0) {
       return [];
