@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const url = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
+  const url = 'https://api.themoviedb.org/3/trending/movie/week?language=en-US';
   const options = {
     method: 'GET',
     headers: {

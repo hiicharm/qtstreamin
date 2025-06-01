@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { Search } from "lucide-react"
 import { Button } from "./ui/button"
-import { Bell } from "lucide-react"
 import { User } from "lucide-react"
 
 export default function Header() {
@@ -34,10 +33,7 @@ export default function Header() {
               <Search className="h-5 w-5" />
             </Button>
           </Link>
-          <Button variant="ghost" size="icon" className=" hover:bg-mocha-teal active:bg-mocha-green">
-            <Bell className="h-5 w-5" />
-          </Button>
-          <Link href="/profile">
+          <Link href="/">
             <Button variant="ghost" size="icon" className=" hover:bg-mocha-teal active:bg-mocha-green">
               <User className="h-5 w-5" />
             </Button>

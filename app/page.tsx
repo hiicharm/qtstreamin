@@ -2,11 +2,17 @@ import FeaturedMovie from "@/components/FeaturedMovie";
 import Header from "@/components/Header";
 import MovieCard from "@/components/MovieCard";
 import ScrollableSection from "@/components/ScrollableSection";
-import { getFeaturedMovie, getTrendingMovies, MovieProps } from "@/lib/tmdbApi";
+import { getTrendingMovies } from "@/lib/tmdbApi";
 
 export default async function Home() {
-  const featuredMovie: MovieProps = await getFeaturedMovie();
-  const trendingMovies: MovieProps[] = await getTrendingMovies();
+  const moviesList = await getTrendingMovies();
+  const featuredMovie = moviesList[0];
+  const removeFeaturedMovie = () => {
+    const list = moviesList;
+    list.shift();
+    return list;
+  }
+  const trendingMovies = removeFeaturedMovie();
   return (
     <div className="min-h-screen">
       <Header />

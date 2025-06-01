@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Star } from "lucide-react"
 import { MovieProps } from "@/lib/tmdbApi"
 import { imageUrlPrefix } from "@/utils/constants"
+import { vote } from "@/utils/helpers"
 
 
 export default function MovieCard({ movie }: { movie: MovieProps }) {
@@ -19,7 +20,7 @@ export default function MovieCard({ movie }: { movie: MovieProps }) {
           <h3 className="font-bold text-xl line-clamp-2">{movie.title}</h3>
           <div className="flex items-center mt-1">
             <Star className="h-3 w-3 text-mocha-yellow mr-1" />
-            <span className="text-s text-mocha-subtext1">{movie.vote_average}/10</span>
+            <span className="text-s text-mocha-subtext1">{vote(movie.vote_average)}/10</span>
           </div>
         </div>
       </div>

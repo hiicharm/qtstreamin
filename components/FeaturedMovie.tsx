@@ -5,6 +5,7 @@ import { Play, Star } from 'lucide-react'
 import { imageUrlPrefix } from '@/utils/constants'
 import { MovieProps } from '@/lib/tmdbApi'
 import { Button } from './ui/button'
+import { vote } from '@/utils/helpers'
 
 const FeaturedMovie = ({ movie }: { movie: MovieProps }) => {
   return (
@@ -25,7 +26,7 @@ const FeaturedMovie = ({ movie }: { movie: MovieProps }) => {
           <div className="flex items-center gap-4 text-sm">
             <div className="flex items-center">
               <Star className="h-4 w-4 text-mocha-yellow mr-1" />
-              <span className="text-mocha-subtext1">{movie.vote_average}/10</span>
+              <span className="text-mocha-subtext1">{vote(movie.vote_average)}/10</span>
             </div>
             <span className="text-mocha-subtext1">{movie.release_date}</span>
           </div>
