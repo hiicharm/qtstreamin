@@ -10,7 +10,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-8">
           <Link href="/" className="text-2xl font-bold text-mocha-teal">
-            Lumina
+            qtStream.in
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="/" className="hover:text-mocha-teal transition-colors  active:text-mocha-green">

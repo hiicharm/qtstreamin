@@ -1,14 +1,14 @@
-# 🌟 Lumina
+# 🌟 qtStream.in
 
 **Stream Movies & TV Shows Without Ads — Effortlessly.**
 
-![Lumina Screenshot](./public/homepage.png) <!-- Replace with your actual screenshot -->
+![qtStream.in Screenshot](./public/homepage.png) <!-- Replace with your actual screenshot -->
 
 ---
 
 ## ✨ Overview
 
-**Lumina** is a sleek, modern movie and TV show streaming platform built with **Next.js**. The goal is simple: provide users with a smooth, distraction-free viewing experience — no ads, no clutter, just content.
+**qtStream.in** is a sleek, modern movie and TV show streaming platform built with **Next.js**. The goal is simple: provide users with a smooth, distraction-free viewing experience — no ads, no clutter, just content.
 
 ---
 
@@ -47,7 +47,7 @@
 <!---->
 <!-- ```bash -->
 <!-- # Clone the repo -->
-<!-- git clone https://github.com/roirepus/lumina.git -->
+<!-- git clone https://github.com/roirepus/qtstreamin.git -->
 <!-- cd lumina -->
 <!---->
 <!-- # Install dependencies -->

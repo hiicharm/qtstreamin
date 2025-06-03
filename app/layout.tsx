@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumina",
+  title: "qtStream.in",
   description: "No Clutter Pure Entertainment",
 };
 

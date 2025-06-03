@@ -26,10 +26,10 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: roirepus/lumina:latest
+          tags: hiicharm/qtstreamin:latest
       -    
         name: Verify Pushed Image
-        run: docker pull roirepus/lumina:latest
+        run: docker pull hiicharm/qtstreamin:latest
       -
         name: Deploy to VPS
         uses: appleboy/ssh-action@master
@@ -39,11 +39,11 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             echo "NEXT_PRIVATE_TMDB_AUTH_HEADER=${{ secrets.NEXT_PRIVATE_TMDB_AUTH_HEADER }}" > .env
-            sudo docker pull roirepus/lumina:latest
-            sudo docker stop lumina || true
-            sudo docker rm lumina || true
+            sudo docker pull hiicharm/qtstreamin:latest
+            sudo docker stop qtstreamin || true
+            sudo docker rm qtstreamin || true
             sudo docker run -d -p 3005:3000 \
               --env-file .env \
-              --name lumina \
-              roirepus/lumina:latest
+              --name qtstreamin \
+              hiicharm/qtstreamin:latest
             rm .env
